@@ -1,0 +1,105 @@
+/* ══════════════════════════════════════════════
+   NAVBAR  – Dark / Light Theme
+══════════════════════════════════════════════ */
+.navbar {
+  position:fixed; top:0; left:0; right:0; z-index:200;
+  display:flex; align-items:center; justify-content:space-between;
+  padding:0 5%; height:var(--nav-h);
+  background:var(--bg-nav);
+  border-bottom:1px solid var(--border-nav);
+  backdrop-filter:blur(20px);
+  -webkit-backdrop-filter:blur(20px);
+  transition:box-shadow .3s, background .35s, border-color .35s;
+}
+.navbar.scrolled { box-shadow:0 1px 0 rgba(232,117,10,0.18), 0 4px 32px rgba(0,0,0,0.5); }
+
+/* Logo */
+.nav-logo { display:flex; align-items:center; gap:14px; cursor:pointer; }
+.nav-brand-name {
+  font-family:'Cormorant Garamond',serif;
+  font-size:20px; font-weight:700; letter-spacing:2px;
+  color:var(--text-heading); display:block;
+  transition:color .35s;
+}
+.nav-brand-tag {
+  font-size:9px; color:var(--saffron-light);
+  letter-spacing:3.5px; text-transform:uppercase;
+  display:block; margin-top:1px;
+}
+[data-theme="light"] .nav-brand-name { color:#1A0800; }
+[data-theme="light"] .nav-brand-tag  { color:var(--saffron-dark); }
+
+/* Links */
+.nav-links { display:flex; gap:28px; list-style:none; }
+.nav-links a {
+  color:var(--text-nav); font-size:12px; letter-spacing:1.8px; text-transform:uppercase;
+  cursor:pointer; padding:4px 0; border-bottom:1.5px solid transparent;
+  transition:color .2s, border-color .2s;
+}
+.nav-links a:hover, .nav-links a.active {
+  color:var(--saffron-light); border-bottom-color:var(--saffron);
+}
+[data-theme="light"] .nav-links a:hover,
+[data-theme="light"] .nav-links a.active { color:var(--saffron-dark); border-bottom-color:var(--saffron-dark); }
+
+/* CTA */
+.nav-cta {
+  background:linear-gradient(135deg, var(--saffron) 0%, var(--saffron-dark) 100%);
+  color:#fff; border:none; padding:10px 24px; border-radius:6px;
+  font-size:12px; font-weight:700; letter-spacing:1.2px; text-transform:uppercase;
+  cursor:pointer; transition:opacity .2s, transform .2s;
+  box-shadow:0 4px 16px rgba(232,117,10,0.3);
+}
+.nav-cta:hover { opacity:.88; transform:translateY(-1px); }
+
+/* ── Theme Toggle Button ───────────────────── */
+.theme-toggle {
+  width:38px; height:38px; border-radius:50%;
+  background:var(--theme-toggle-bg);
+  border:1px solid var(--theme-toggle-border);
+  color:var(--theme-toggle-color);
+  display:flex; align-items:center; justify-content:center;
+  cursor:pointer; font-size:16px;
+  transition:background .3s, border-color .3s, transform .2s;
+  flex-shrink:0;
+}
+.theme-toggle:hover { transform:scale(1.1) rotate(15deg); }
+.theme-toggle .t-icon { animation:themeSwitch .3s ease; display:block; }
+
+/* Hamburger */
+.hamburger { display:none; flex-direction:column; gap:5px; background:none; border:none; cursor:pointer; padding:4px; }
+.hamburger span { display:block; width:24px; height:1.5px; background:var(--text-heading); border-radius:2px; transition:all .35s; }
+.hamburger.open span:nth-child(1) { transform:translateY(6.5px) rotate(45deg); }
+.hamburger.open span:nth-child(2) { opacity:0; transform:scaleX(0); }
+.hamburger.open span:nth-child(3) { transform:translateY(-6.5px) rotate(-45deg); }
+
+/* Mobile menu */
+.mobile-menu {
+  position:fixed; top:var(--nav-h); inset-inline:0; bottom:0; z-index:199;
+  background:var(--bg-nav);
+  display:none; flex-direction:column; padding:40px 8%; overflow-y:auto;
+  border-top:1px solid var(--border-subtle);
+  backdrop-filter:blur(20px);
+}
+.mobile-menu.open { display:flex; }
+.mobile-menu a {
+  font-size:32px; font-family:'Cormorant Garamond',serif;
+  color:var(--text-heading);
+  padding:14px 0; border-bottom:1px solid var(--border-card);
+  cursor:pointer; transition:color .2s;
+}
+.mobile-menu a:hover { color:var(--saffron-light); }
+.mobile-menu .mob-cta {
+  margin-top:32px;
+  background:linear-gradient(135deg, var(--saffron), var(--saffron-dark));
+  color:#fff; border:none; border-radius:6px;
+  padding:16px; font-size:14px; font-weight:700;
+  letter-spacing:2px; text-transform:uppercase; cursor:pointer;
+}
+
+.nav-right { display:flex; align-items:center; gap:12px; }
+
+@media (max-width:860px) {
+  .nav-links, .nav-cta { display:none; }
+  .hamburger { display:flex; }
+}

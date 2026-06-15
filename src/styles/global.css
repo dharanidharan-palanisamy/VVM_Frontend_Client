@@ -1,0 +1,151 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,400;1,600&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600&display=swap');
+
+/* ═══════════════════════════════════════════════
+   DARK THEME (default)
+═══════════════════════════════════════════════ */
+:root,
+[data-theme="dark"] {
+  --saffron:        #E8750A;
+  --saffron-light:  #F5A050;
+  --saffron-dark:   #B85A00;
+  --turmeric:       #F2C94C;
+  --chilli:         #C0392B;
+  --chilli-light:   #E8584A;
+
+  --bg-page:        #000000;
+  --bg-nav:         rgba(0,0,0,0.97);
+  --bg-hero:        #000000;
+  --bg-1:           #0D0D0D;
+  --bg-2:           #111111;
+  --bg-3:           #141414;
+  --bg-4:           #1A1A1A;
+  --bg-card:        #1A1A1A;
+  --bg-input:       rgba(255,255,255,0.05);
+  --bg-modal:       #1A1A1A;
+  --bg-modal-head:  #050505;
+  --bg-tag:         rgba(232,117,10,0.08);
+  --bg-form:        rgba(255,255,255,0.03);
+  --bg-map:         linear-gradient(145deg,#0F0F0F,#050505);
+  --bg-stats:       linear-gradient(135deg,#050505 0%,#0F0F0F 100%);
+  --bg-why:         #050505;
+  --bg-process:     #0D0D0D;
+  --bg-footer:      #000000;
+  --bg-marquee:     #111111;
+
+  --text-heading:   #FFFFFF;
+  --text-body:      #AAAAAA;
+  --text-sub:       #666666;
+  --text-label:     rgba(255,255,255,0.35);
+  --text-dim:       rgba(255,255,255,0.25);
+  --text-nav:       rgba(255,255,255,0.55);
+  --text-stat:      rgba(255,255,255,0.35);
+  --text-card:      #E0E0E0;
+  --text-card-sub:  #666666;
+  --text-white:     #FFFFFF;
+  --text-marquee:   var(--saffron-light);
+
+  --border-nav:     rgba(255,255,255,0.06);
+  --border-card:    rgba(255,255,255,0.06);
+  --border-subtle:  rgba(232,117,10,0.12);
+  --border-input:   rgba(232,117,10,0.15);
+  --border-state:   rgba(232,117,10,0.15);
+
+  --shadow-card:    rgba(0,0,0,0.7);
+  --shadow-modal:   rgba(0,0,0,0.9);
+
+  --process-circle: #1A1A1A;
+  --step-n-bg:      #0D0D0D;
+  --modal-attr-bg:  #111111;
+  --modal-attr-border: rgba(255,255,255,0.06);
+
+  --scrollbar-thumb: var(--saffron-dark);
+
+  --theme-toggle-bg:     rgba(255,255,255,0.06);
+  --theme-toggle-color:  #AAAAAA;
+  --theme-toggle-border: rgba(255,255,255,0.1);
+}
+
+/* ═══════════════════════════════════════════════
+   LIGHT THEME
+═══════════════════════════════════════════════ */
+[data-theme="light"] {
+  --bg-page:        #F8F4EF;
+  --bg-nav:         rgba(255,252,248,0.97);
+  --bg-hero:        #1A0800;
+  --bg-1:           #F0EAE0;
+  --bg-2:           #FAF6F0;
+  --bg-3:           #FDF9F4;
+  --bg-4:           #FFFFFF;
+  --bg-card:        #FFFFFF;
+  --bg-input:       rgba(0,0,0,0.03);
+  --bg-modal:       #FFFFFF;
+  --bg-modal-head:  #1A0800;
+  --bg-tag:         rgba(232,117,10,0.08);
+  --bg-form:        rgba(0,0,0,0.02);
+  --bg-map:         linear-gradient(145deg,#1A0E06,#0D0600);
+  --bg-stats:       linear-gradient(135deg,#1A0800 0%,#2B1200 100%);
+  --bg-why:         #1A0800;
+  --bg-process:     #F0EAE0;
+  --bg-footer:      #0D0500;
+  --bg-marquee:     #F0EAE0;
+
+  --text-heading:   #1A0800;
+  --text-body:      #5C3010;
+  --text-sub:       #9A6040;
+  --text-label:     rgba(26,8,0,0.45);
+  --text-dim:       rgba(26,8,0,0.3);
+  --text-nav:       rgba(26,8,0,0.65);
+  --text-stat:      rgba(255,249,244,0.38);
+  --text-card:      #1A0800;
+  --text-card-sub:  #9A6040;
+  --text-white:     #FFFFFF;
+  --text-marquee:   var(--saffron-dark);
+
+  --border-nav:     rgba(232,117,10,0.15);
+  --border-card:    rgba(232,117,10,0.12);
+  --border-subtle:  rgba(232,117,10,0.15);
+  --border-input:   rgba(232,117,10,0.2);
+  --border-state:   rgba(232,117,10,0.18);
+
+  --shadow-card:    rgba(180,80,0,0.12);
+  --shadow-modal:   rgba(0,0,0,0.4);
+
+  --process-circle: #FFFFFF;
+  --step-n-bg:      #F0EAE0;
+  --modal-attr-bg:  #F8F4EF;
+  --modal-attr-border: rgba(232,117,10,0.1);
+
+  --scrollbar-thumb: var(--saffron);
+
+  --theme-toggle-bg:     rgba(232,117,10,0.08);
+  --theme-toggle-color:  var(--saffron-dark);
+  --theme-toggle-border: rgba(232,117,10,0.2);
+}
+
+/* ═══════════════════════════════════════════════
+   BASE STYLES
+═══════════════════════════════════════════════ */
+*, *::before, *::after { margin:0; padding:0; box-sizing:border-box; }
+html { scroll-behavior:smooth; font-size:16px; }
+body {
+  font-family:'DM Sans',sans-serif;
+  background:var(--bg-page);
+  color:var(--text-body);
+  overflow-x:hidden;
+  line-height:1.6;
+  transition: background 0.35s ease, color 0.35s ease;
+}
+button, input, select, textarea { font-family:inherit; }
+a { text-decoration:none; }
+
+::-webkit-scrollbar { width:4px; }
+::-webkit-scrollbar-track { background:#000; }
+::-webkit-scrollbar-thumb { background:var(--scrollbar-thumb); border-radius:2px; }
+
+@keyframes pulse      { 0%,100%{opacity:1} 50%{opacity:.35} }
+@keyframes marquee    { from{transform:translateX(0)} to{transform:translateX(-50%)} }
+@keyframes fadeUp     { from{opacity:0;transform:translateY(28px)} to{opacity:1;transform:translateY(0)} }
+@keyframes modal-in   { from{opacity:0;transform:translateY(20px) scale(.97)} to{opacity:1;transform:translateY(0) scale(1)} }
+@keyframes pulse-ring { 0%{box-shadow:0 0 0 0 rgba(37,211,102,.5)} 70%{box-shadow:0 0 0 14px rgba(37,211,102,0)} 100%{box-shadow:0 0 0 0 rgba(37,211,102,0)} }
+@keyframes spin       { to{transform:rotate(360deg)} }
+@keyframes themeSwitch { from{transform:scale(0.8) rotate(-30deg);opacity:0} to{transform:scale(1) rotate(0deg);opacity:1} }
