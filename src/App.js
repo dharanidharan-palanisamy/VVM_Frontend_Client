@@ -50,7 +50,7 @@ function Counter({ target, suffix = '', active }) {
 ════════════════════════════════════════════════ */
 function CartDrawer({ cart, onClose, onUpdateQty, onRemove, onClear, onCheckout }) {
   const total = cart.reduce((s, i) => s + Number(i.price) * i.qty, 0);
-  const totalItems = cart.length;
+  const totalItems = cart.reduce((s, i) => s + i.qty, 0);
 
   return (
     <>
@@ -131,7 +131,7 @@ function CartPage({ cart, onUpdateQty, onRemove, onClear, onBack }) {
   });
 
   const total  = cart.reduce((s, i) => s + Number(i.price) * i.qty, 0);
-  const totalItems = cart.length;
+  const totalItems = cart.reduce((s, i) => s + i.qty, 0);
 
   const validate = () => {
     const e = {};
@@ -996,7 +996,7 @@ function App() {
 
   const clearCart = useCallback(() => setCart([]), []);
 
-  const cartCount = cart.length;
+  const cartCount = cart.reduce((s, i) => s + i.qty, 0);
 
   /* Nav */
   const [defaultProduct, setDefaultProduct] = useState('');
