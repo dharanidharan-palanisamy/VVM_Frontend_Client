@@ -2,28 +2,21 @@
 import React, { useState, useEffect } from 'react';
 import './Navbar.css';
 
-/* ── Diamond SVG Logo ───────────────────────────── */
 export function DiamondLogo({ size = 44 }) {
   return (
-    <svg width={size} height={size} viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
-      <defs>
-        <linearGradient id="dg1" x1="0%" y1="0%" x2="100%" y2="100%">
-          <stop offset="0%" stopColor="#F5A050"/>
-          <stop offset="50%" stopColor="#E8750A"/>
-          <stop offset="100%" stopColor="#B85A00"/>
-        </linearGradient>
-        <filter id="dglow">
-          <feGaussianBlur stdDeviation="2" result="blur"/>
-          <feComposite in="SourceGraphic" in2="blur" operator="over"/>
-        </filter>
-      </defs>
-      <rect x="8" y="8" width="44" height="44" rx="6" fill="rgba(232,117,10,0.15)" transform="rotate(45 30 30)"/>
-      <rect x="11" y="11" width="38" height="38" rx="5" fill="url(#dg1)" transform="rotate(45 30 30)" filter="url(#dglow)"/>
-      <path d="M30 8 L52 30 L30 52 L8 30 Z" fill="none" stroke="rgba(255,255,255,0.12)" strokeWidth="1"/>
-      <ellipse cx="22" cy="20" rx="5" ry="3" fill="rgba(255,255,255,0.35)" transform="rotate(-45 22 20)"/>
-      <text x="30" y="34" textAnchor="middle" fontSize="12" fontWeight="700"
-        fontFamily="Cormorant Garamond, serif" fill="#FFF9F4" letterSpacing="0.5">VVM</text>
-    </svg>
+    <img 
+      src="/logo.png" 
+      alt="VVM Logo" 
+      style={{ 
+        width: size, 
+        height: size, 
+        borderRadius: '50%',
+        backgroundColor: '#fff',
+        padding: '2px',
+        objectFit: 'contain',
+        boxShadow: '0 2px 8px rgba(0,0,0,0.12)'
+      }} 
+    />
   );
 }
 
@@ -62,7 +55,7 @@ function Navbar({ onNav, theme, toggleTheme, cartCount, onCartOpen }) {
     <>
       <nav className={`navbar ${scrolled ? 'scrolled' : ''}`}>
         <div className="nav-logo" onClick={() => go('home')}>
-          <DiamondLogo size={44} />
+          <DiamondLogo size={48} />
           <div>
             <span className="nav-brand-name">VVM TRADERS</span>
             <span className="nav-brand-tag">Spice Exporters · </span>

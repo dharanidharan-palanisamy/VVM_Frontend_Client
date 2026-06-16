@@ -5,6 +5,7 @@
 ═══════════════════════════════════════════════ */
 :root,
 [data-theme="dark"] {
+  --nav-h:          80px;
   --saffron:        #E8750A;
   --saffron-light:  #F5A050;
   --saffron-dark:   #B85A00;
