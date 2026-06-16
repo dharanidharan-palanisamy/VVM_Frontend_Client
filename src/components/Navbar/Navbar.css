@@ -103,3 +103,37 @@
   .nav-links, .nav-cta { display:none; }
   .hamburger { display:flex; }
 }
+
+@media (max-width:480px) {
+  :root {
+    --nav-h: 64px;
+  }
+  .navbar {
+    padding: 0 16px;
+  }
+  .nav-logo {
+    gap: 8px;
+  }
+  .diamond-logo-img {
+    width: 34px !important;
+    height: 34px !important;
+  }
+  .nav-brand-name {
+    font-size: 15px;
+    letter-spacing: 1.5px;
+  }
+  .nav-brand-tag {
+    display: none; /* Hide tagline on mobile to save space */
+  }
+  .nav-right {
+    gap: 8px;
+  }
+  .theme-toggle {
+    width: 32px;
+    height: 32px;
+    font-size: 14px;
+  }
+  .nav-cart-btn {
+    font-size: 18px;
+  }
+}

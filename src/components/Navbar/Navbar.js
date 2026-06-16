@@ -7,6 +7,7 @@ export function DiamondLogo({ size = 44 }) {
     <img 
       src="/logo.png" 
       alt="VVM Logo" 
+      className="diamond-logo-img"
       style={{ 
         width: size, 
         height: size, 
